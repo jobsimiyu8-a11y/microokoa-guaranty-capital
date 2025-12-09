@@ -68,8 +68,8 @@ body {
 /* Hero section */
 .hero {
     padding: 60px 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: orange;
+    background:orange;
+    color: white;
 }
 
 .hero-container {
@@ -88,7 +88,7 @@ body {
 
 .card {
     background: green;
-    color: #333;
+    color: white;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -152,7 +152,7 @@ body {
 /* Footer */
 footer {
     background: #333;
-    color: green;
+    color: white;
     padding: 40px 0;
     margin-top: 60px;
 }
@@ -175,11 +175,12 @@ footer {
 }
 
 .link-group a {
-    color: #ccc;
+    color: white;
     text-decoration: none;
 }
 
 .link-group a:hover {
     color: white;
 }
+
 
