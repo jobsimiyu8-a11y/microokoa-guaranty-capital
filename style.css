@@ -133,7 +133,8 @@ body {
 }
 
 .service-card {
-    background: white;
+    background: orange, green, orange;
+    color: white
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -182,6 +183,7 @@ footer {
 .link-group a:hover {
     color: white;
 }
+
 
 
 
