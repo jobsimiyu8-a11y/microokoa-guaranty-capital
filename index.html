@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Microokoa Guaranty Capital - Donate as little as Kshs 200 and access loans worth 10x your donation. Community-powered financing for all.">
+    <meta name="keywords" content="microfinance, loans, donations, Kenya, community finance, business loans, quick loans">
     <title>Microokoa Guaranty Capital - Donate Today, Borrow Now!</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
     <!-- Navigation -->
@@ -28,7 +31,7 @@
             <button class="apply-now donate-btn">
                 <i class="fas fa-heart"></i> Donate Now
             </button>
-            <button class="menu-toggle">
+            <button class="menu-toggle" aria-label="Toggle navigation menu">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
@@ -89,7 +92,7 @@
                 <div class="step">
                     <div class="step-number">1</div>
                     <div class="step-icon">
-                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart" aria-hidden="true"></i>
                     </div>
                     <h3>Donate</h3>
                     <p>Contribute as little as Kshs 200 to our community fund</p>
@@ -97,7 +100,7 @@
                 <div class="step">
                     <div class="step-number">2</div>
                     <div class="step-icon">
-                        <i class="fas fa-handshake"></i>
+                        <i class="fas fa-handshake" aria-hidden="true"></i>
                     </div>
                     <h3>Borrow</h3>
                     <p>Access loans worth 10x your donation amount</p>
@@ -105,7 +108,7 @@
                 <div class="step">
                     <div class="step-number">3</div>
                     <div class="step-icon">
-                        <i class="fas fa-chart-line"></i>
+                        <i class="fas fa-chart-line" aria-hidden="true"></i>
                     </div>
                     <h3>Thrive</h3>
                     <p>Grow your business and build financial stability</p>
@@ -123,8 +126,8 @@
             </div>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon" style="background: rgba(46, 204, 113, 0.1);">
-                        <i class="fas fa-bolt" style="color: #2ecc71;"></i>
+                    <div class="service-icon">
+                        <i class="fas fa-bolt"></i>
                     </div>
                     <h3>QuickLoans</h3>
                     <p>Fast, small loans for emergencies and immediate needs. Get approved within hours.</p>
@@ -135,8 +138,8 @@
                     </ul>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon" style="background: rgba(230, 126, 34, 0.1);">
-                        <i class="fas fa-business-time" style="color: #e67e22;"></i>
+                    <div class="service-icon">
+                        <i class="fas fa-business-time"></i>
                     </div>
                     <h3>BusinessLoans</h3>
                     <p>Capital for business expansion, inventory, and equipment. Grow your enterprise.</p>
@@ -147,8 +150,8 @@
                     </ul>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon" style="background: rgba(46, 204, 113, 0.1);">
-                        <i class="fas fa-hand-holding-heart" style="color: #2ecc71;"></i>
+                    <div class="service-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
                     </div>
                     <h3>Donate & Access</h3>
                     <p>Donate to build community capital and unlock your borrowing potential.</p>
@@ -215,7 +218,7 @@
                         </div>
                         <div class="result-item">
                             <span>Loan Access:</span>
-                            <strong id="loanAccess" style="color: #e67e22;">Kshs 20,000</strong>
+                            <strong id="loanAccess">Kshs 20,000</strong>
                         </div>
                         <div class="result-item highlight">
                             <span>Community Impact:</span>
@@ -315,16 +318,16 @@
                     </div>
                     
                     <div class="social-links">
-                        <a href="#" class="social-twitter" title="X (Twitter)">
+                        <a href="#" class="social-twitter" title="X (Twitter)" aria-label="Follow us on X">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="#" class="social-facebook" title="Facebook">
+                        <a href="#" class="social-facebook" title="Facebook" aria-label="Follow us on Facebook">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="social-whatsapp" title="WhatsApp">
+                        <a href="#" class="social-whatsapp" title="WhatsApp" aria-label="Contact us on WhatsApp">
                             <i class="fab fa-whatsapp"></i>
                         </a>
-                        <a href="#" class="social-instagram" title="Instagram">
+                        <a href="#" class="social-instagram" title="Instagram" aria-label="Follow us on Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
@@ -334,23 +337,23 @@
                     <h3>Quick Contact Form</h3>
                     <form id="contactForm">
                         <div class="form-group">
-                            <input type="text" placeholder="Your Full Name" required>
+                            <input type="text" name="fullname" placeholder="Your Full Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" placeholder="Phone Number" required>
+                            <input type="tel" name="phone" placeholder="Phone Number" required>
                         </div>
                         <div class="form-group">
-                            <select required>
+                            <select name="interest" required>
                                 <option value="" disabled selected>What are you interested in?</option>
-                                <option>Making a Donation</option>
-                                <option>QuickLoan Application</option>
-                                <option>BusinessLoan Application</option>
-                                <option>General Inquiry</option>
-                                <option>Partnership Opportunity</option>
+                                <option value="donation">Making a Donation</option>
+                                <option value="quickloan">QuickLoan Application</option>
+                                <option value="businessloan">BusinessLoan Application</option>
+                                <option value="inquiry">General Inquiry</option>
+                                <option value="partnership">Partnership Opportunity</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <textarea rows="4" placeholder="Your message here..." required></textarea>
+                            <textarea name="message" rows="4" placeholder="Your message here..." required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">
                             <i class="fas fa-paper-plane"></i> Send Message
@@ -415,5 +418,4 @@
 
     <script src="script.js"></script>
 </body>
-
 </html>
