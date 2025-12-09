@@ -62,7 +62,7 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: #333;
+    color: white;
 }
 
 /* Hero section */
@@ -151,7 +151,7 @@ body {
 
 /* Footer */
 footer {
-    background: #333;
+    background: green;
     color: white;
     padding: 40px 0;
     margin-top: 60px;
@@ -182,5 +182,6 @@ footer {
 .link-group a:hover {
     color: white;
 }
+
 
 
