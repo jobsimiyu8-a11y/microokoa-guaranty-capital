@@ -1,122 +1,184 @@
-// Microokoa Guaranty Capital - Interactive Features
-document.addEventListener('DOMContentLoaded', function() {
-    // Donation Calculator
-    const donationAmount = document.getElementById('donationAmount');
-    const donationValue = document.getElementById('donationValue');
-    const calculateBtn = document.getElementById('calculateBtn');
-    const yourDonation = document.getElementById('yourDonation');
-    const loanAccess = document.getElementById('loanAccess');
-    const communityImpact = document.getElementById('communityImpact');
-    
-    // Update donation amount display
-    donationAmount.addEventListener('input', function() {
-        const value = parseInt(this.value);
-        donationValue.textContent = value.toLocaleString();
-    });
-    
-    // Calculate donation impact
-    function calculateImpact() {
-        const amount = parseInt(donationAmount.value);
-        const loanMultiplier = 10;
-        const loanAccessAmount = amount * loanMultiplier;
-        const peopleHelped = Math.floor(amount / 200);
-        
-        // Update display
-        yourDonation.textContent = `Kshs ${amount.toLocaleString()}`;
-        loanAccess.textContent = `Kshs ${loanAccessAmount.toLocaleString()}`;
-        communityImpact.textContent = `${peopleHelped}+ people helped`;
-    }
-    
-    // Calculate on button click
-    if (calculateBtn) {
-        calculateBtn.addEventListener('click', calculateImpact);
-    }
-    
-    // Calculate on page load
-    calculateImpact();
-    
-    // Form submission
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for contacting Microokoa Guaranty Capital! We will get back to you within 24 hours.');
-            this.reset();
-        });
-    }
-    
-    // Mobile menu toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-    
-    if (menuToggle && navMenu) {
-        menuToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('show');
-        });
-    }
-    
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            if(targetId === '#') return;
-            
-            const targetElement = document.querySelector(targetId);
-            if(targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-                
-                // Update active nav link
-                document.querySelectorAll('.nav-link').forEach(link => {
-                    link.classList.remove('active');
-                });
-                this.classList.add('active');
-                
-                // Close mobile menu if open
-                if (navMenu && navMenu.classList.contains('show')) {
-                    navMenu.classList.remove('show');
-                }
-            }
-        });
-    });
-    
-    // Donate button functionality
-    const donateButtons = document.querySelectorAll('.donate-now-btn, .donate-btn');
-    donateButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            alert('Thank you for choosing to donate! You will be redirected to our secure donation portal.');
-            // In a real website, this would redirect to payment page
-            window.location.href = '#donate';
-        });
-    });
-    
-    // Loan product cards hover effect
-    const serviceCards = document.querySelectorAll('.service-card');
-    serviceCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-10px)';
-            this.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.15)';
-        });
-        
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0)';
-            this.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
-        });
-    });
-    
-    // Social media links
-    const socialLinks = document.querySelectorAll('.social-links a');
-    socialLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const platform = this.getAttribute('title') || this.className;
-            alert(`You would be redirected to our ${platform} page. In a real website, this would open the social media profile.`);
-        });
-    });
-    
-    // Initialize donation slider
-    donationAmount.dispatchEvent(new Event('input'));
-});
+/* style.css - Basic styles to get started */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Add basic button styles */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #2ecc71;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #2ecc71;
+}
+
+.btn-secondary {
+    background: #e67e22;
+}
+
+/* Basic navigation */
+.navbar {
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 15px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Hero section */
+.hero {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.card {
+    background: white;
+    color: #333;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.highlight {
+    color: #e67e22;
+    font-weight: bold;
+}
+
+/* Steps section */
+.steps {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+    gap: 20px;
+}
+
+.step {
+    text-align: center;
+    flex: 1;
+}
+
+.step-number {
+    background: #2ecc71;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+}
+
+/* Loan products */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.service-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 40px 0;
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 40px;
+}
+
+.link-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.link-group a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.link-group a:hover {
+    color: white;
+}
