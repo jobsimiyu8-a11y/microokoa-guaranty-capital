@@ -38,7 +38,7 @@ body {
 
 /* Basic navigation */
 .navbar {
-    background: white;
+    background: green;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     padding: 15px 0;
 }
@@ -69,7 +69,7 @@ body {
 .hero {
     padding: 60px 0;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    color: orange;
 }
 
 .hero-container {
@@ -87,7 +87,7 @@ body {
 }
 
 .card {
-    background: white;
+    background: green;
     color: #333;
     padding: 30px;
     border-radius: 10px;
@@ -152,7 +152,7 @@ body {
 /* Footer */
 footer {
     background: #333;
-    color: white;
+    color: green;
     padding: 40px 0;
     margin-top: 60px;
 }
@@ -182,3 +182,4 @@ footer {
 .link-group a:hover {
     color: white;
 }
+
