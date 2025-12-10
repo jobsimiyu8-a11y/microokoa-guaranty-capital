@@ -1,0 +1,162 @@
+// ===== LOAN CALCULATOR =====
+
+document.addEventListener('DOMContentLoaded', function() {
+    initLoanCalculator();
+});
+
+function initLoanCalculator() {
+    const donationSlider = document.getElementById('donation-slider');
+    const donationValue = document.getElementById('donation-value');
+    const loanAccess = document.getElementById('loan-access');
+    const communityImpact = document.getElementById('community-impact');
+    const calculateBtn = document.getElementById('calculate-btn');
+    
+    if (!donationSlider || !donationValue || !loanAccess || !communityImpact) return;
+    
+    // Format number with commas
+    const formatNumber = (num) => {
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    };
+    
+    // Calculate loan and impact
+    const calculateLoan = (donation) => {
+        const loanAmount = donation * 10; // 10x multiplier
+        const peopleHelped = Math.max(1, Math.floor(donation / 200)); // At least 1 person
+        
+        return {
+            loan: loanAmount,
+            impact: peopleHelped
+        };
+    };
+    
+    // Update display
+    const updateDisplay = () => {
+        const donation = parseInt(donationSlider.value);
+        const { loan, impact } = calculateLoan(donation);
+        
+        // Update values
+        donationValue.textContent = formatNumber(donation);
+        loanAccess.textContent = `${formatNumber(loan)} KSH`;
+        communityImpact.textContent = `${impact}+ people helped`;
+        
+        // Update slider background
+        const percentage = ((donation - donationSlider.min) / (donationSlider.max - donationSlider.min)) * 100;
+        donationSlider.style.background = `linear-gradient(to right, var(--forest-green) 0%, var(--forest-green) ${percentage}%, var(--gray-300) ${percentage}%, var(--gray-300) 100%)`;
+    };
+    
+    // Event listeners
+    donationSlider.addEventListener('input', updateDisplay);
+    
+    // Calculate button
+    if (calculateBtn) {
+        calculateBtn.addEventListener('click', function() {
+            this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Calculating...';
+            
+            setTimeout(() => {
+                updateDisplay();
+                this.innerHTML = '<i class="fas fa-calculator"></i> Calculate';
+                
+                // Show success toast
+                const donation = parseInt(donationSlider.value);
+                const { loan } = calculateLoan(donation);
+                
+                window.showToast({
+                    type: 'success',
+                    title: 'Calculation Complete!',
+                    message: `With KSH ${formatNumber(donation)} donation, you can access up to KSH ${formatNumber(loan)} loan.`
+                });
+            }, 800);
+        });
+    }
+    
+    // Initialize
+    updateDisplay();
+    
+    // Advanced Calculator Function
+    window.calculateAdvancedLoan = function(donation, multiplier = 10, termMonths = 6) {
+        const loanAmount = donation * multiplier;
+        const monthlyRepayment = loanAmount / termMonths;
+        const totalRepayment = loanAmount * 1.15; // 15% service fee
+        const monthlyPayment = totalRepayment / termMonths;
+        
+        return {
+            loanAmount,
+            monthlyRepayment: Math.round(monthlyRepayment),
+            totalRepayment: Math.round(totalRepayment),
+            monthlyPayment: Math.round(monthlyPayment),
+            serviceFee: Math.round(loanAmount * 0.15),
+            termMonths
+        };
+    };
+    
+    // Export Calculator Results
+    window.exportCalculatorResults = function() {
+        const donation = parseInt(donationSlider.value);
+        const results = calculateAdvancedLoan(donation);
+        
+        const csvContent = [
+            ['Donation Amount', 'Loan Amount', 'Monthly Payment', 'Total Repayment', 'Term (Months)'],
+            [donation, results.loanAmount, results.monthlyPayment, results.totalRepayment, results.termMonths]
+        ].map(row => row.join(',')).join('\n');
+        
+        const blob = new Blob([csvContent], { type: 'text/csv' });
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `microokoa-loan-calculator-${new Date().getTime()}.csv`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+    };
+}
+
+// Currency Converter
+const currencyConverter = {
+    rates: {
+        USD: 0.007,
+        EUR: 0.0065,
+        GBP: 0.0055
+    },
+    
+    convert: function(amountKES, currency) {
+        if (!this.rates[currency]) return amountKES;
+        return amountKES * this.rates[currency];
+    },
+    
+    formatCurrency: function(amount, currency) {
+        const symbols = {
+            KES: 'KSH',
+            USD: '$',
+            EUR: '€',
+            GBP: '£'
+        };
+        
+        return `${symbols[currency] || ''} ${amount.toFixed(2)}`;
+    }
+};
+
+// Amortization Schedule Generator
+function generateAmortizationSchedule(loanAmount, annualRate, termMonths) {
+    const monthlyRate = annualRate / 12 / 100;
+    const monthlyPayment = loanAmount * (monthlyRate * Math.pow(1 + monthlyRate, termMonths)) / (Math.pow(1 + monthlyRate, termMonths) - 1);
+    
+    let balance = loanAmount;
+    const schedule = [];
+    
+    for (let month = 1; month <= termMonths; month++) {
+        const interest = balance * monthlyRate;
+        const principal = monthlyPayment - interest;
+        balance -= principal;
+        
+        schedule.push({
+            month,
+            payment: Math.round(monthlyPayment),
+            principal: Math.round(principal),
+            interest: Math.round(interest),
+            balance: Math.max(0, Math.round(balance))
+        });
+    }
+    
+    return schedule;
+}
