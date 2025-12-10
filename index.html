@@ -1,426 +1,860 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MICROOKOA GUARANTY CAPITAL - Donate as little as Kshs 200 and access loans worth 10x your donation. Community-powered financing for all.">
-    <meta name="keywords" content="microfinance, loans, donations, Kenya, community finance, business loans, quick loans">
-    <title>MICROOKOA GUARANTY CAPITAL - Donate Today, Borrow Now!</title>
+    <title>Microokoa Guaranty Capital | Donate Today, Borrow Now</title>
+    <meta name="description" content="Community-powered microfinance institution. Donate as little as Kshs 200 and access loans worth 10x your donation amount.">
+    <meta name="keywords" content="microfinance, loans Kenya, donate Kenya, community lending, quick loans, business loans">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://microokoaguarantycapital.com/">
+    <meta property="og:title" content="Microokoa Guaranty Capital">
+    <meta property="og:description" content="Donate Today, Borrow Now! Community-powered microfinance for Kenya.">
+    <meta property="og:image" content="https://microokoaguarantycapital.com/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://microokoaguarantycapital.com/">
+    <meta property="twitter:title" content="Microokoa Guaranty Capital">
+    <meta property="twitter:description" content="Donate Today, Borrow Now! Community-powered microfinance for Kenya.">
+    <meta property="twitter:image" content="https://microokoaguarantycapital.com/images/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <div class="logo">
-                <i class="fas fa-hand-holding-heart"></i>
-                <div>
-                    <h1>Microokoa</h1>
-                    <p class="tagline">Guaranty Capital</p>
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-inner">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <div class="logo-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <div class="logo-text">
+                            <h1>Microokoa Guaranty Capital</h1>
+                            <p class="tagline">Donate Today, Borrow Now!</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Main Navigation -->
+                <nav class="main-nav" id="main-nav">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                        
+                        <!-- Our Products Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a href="products.html" class="nav-link dropdown-toggle">
+                                Our Products <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="products.html#quickloans">QuickLoans</a></li>
+                                <li><a href="products.html#businessloans">BusinessLoans</a></li>
+                                <li><a href="products.html#donate-access">Donate & Access</a></li>
+                            </ul>
+                        </li>
+                        
+                        <!-- Borrow Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a href="products.html" class="nav-link dropdown-toggle">
+                                Borrow <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="products.html#quickloans">QuickLoans</a></li>
+                                <li><a href="products.html#businessloans">BusinessLoans</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item"><a href="donate.html" class="nav-link">Donate</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+                        <li class="nav-item"><a href="careers.html" class="nav-link">Careers</a></li>
+                        <li class="nav-item"><a href="faqs.html" class="nav-link">FAQs</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- Header Actions -->
+                <div class="header-actions">
+                    <!-- Social Media Icons -->
+                    <div class="social-icons">
+                        <a href="https://wa.me/254710340896" class="social-icon" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://twitter.com/MicrookoaGuaCap" class="social-icon" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://facebook.com/MicrookoaGuarantyCapital" class="social-icon" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://youtube.com/@microokoaguarantycapital" class="social-icon" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- CTA Button -->
+                    <a href="https://play.google.com/store" class="cta-button app-download">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Download App</span>
+                    </a>
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
                 </div>
             </div>
-            <div class="nav-menu">
-                <a href="#home" class="nav-link active">Home</a>
-                <a href="#about" class="nav-link">About Us</a>
-                <a href="#loans" class="nav-link">Loans</a>
-                <a href="#donate" class="nav-link">Donate</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
-            <button class="apply-now donate-btn">
-                <i class="fas fa-heart"></i> Donate Now
-            </button>
-            <button class="menu-toggle" aria-label="Toggle navigation menu">
-                <i class="fas fa-bars"></i>
-            </button>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container hero-container">
-            <div class="hero-content">
-                <h1 class="slogan">Donate Today, Borrow Now!</h1>
-                <h2>Microokoa Guaranty Capital</h2>
-                <p class="hero-subtitle">Donate as little as Kshs 200 and access loans worth 10x your donation.</p>
-                <p class="cta-text">"Donate, Borrow, Thrive"</p>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <h3>10x</h3>
-                        <p>Loan Value</p>
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero-section" id="hero">
+        <!-- Image Slider -->
+        <div class="hero-slider owl-carousel" id="hero-slider">
+            <!-- Slide 1 -->
+            <div class="slider-item" style="background-image: url('images/hero-slider/slide1.jpg');">
+                <div class="slider-overlay"></div>
+                <div class="container">
+                    <div class="slider-content">
+                        <h2 class="hero-title">We are Lending to the Unbanked</h2>
+                        <p class="hero-subtitle">Donate Today, Borrow Now!</p>
+                        <p class="hero-description">
+                            Donate as little as Kshs 200 and access loans worth 10x your donation.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="donate.html" class="btn btn-primary">Donate Today, Apply Now</a>
+                            <a href="#how-it-works" class="btn btn-secondary">Learn How It Works</a>
+                        </div>
                     </div>
-                    <div class="stat">
-                        <h3>Kshs 200</h3>
-                        <p>Min Donation</p>
-                    </div>
-                    <div class="stat">
-                        <h3>24h</h3>
-                        <p>Quick Approval</p>
-                    </div>
-                </div>
-                <div class="hero-buttons">
-                    <a href="#donate" class="btn btn-primary">
-                        <i class="fas fa-heart"></i> Donate Today
-                    </a>
-                    <a href="#loans" class="btn btn-secondary">
-                        <i class="fas fa-hand-holding-usd"></i> Borrow Now
-                    </a>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="card">
-                    <h3>Community Powered Financing</h3>
-                    <p>Your donation helps others access capital while building your own borrowing capacity.</p>
-                    <div class="donation-example">
-                        <p>Donate <span class="highlight">Kshs 1,000</span></p>
-                        <p>→ Access up to <span class="highlight">Kshs 10,000</span> in loans</p>
+            
+            <!-- Slide 2 -->
+            <div class="slider-item" style="background-image: url('images/hero-slider/slide2.jpg');">
+                <div class="slider-overlay"></div>
+                <div class="container">
+                    <div class="slider-content">
+                        <h2 class="hero-title">Community Powered Financing</h2>
+                        <p class="hero-subtitle">Your donation helps others uplift</p>
+                        <p class="hero-description">
+                            Enable loans for others while their donations enable your loan.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="donate.html" class="btn btn-primary">Start Donating</a>
+                            <a href="#calculator" class="btn btn-secondary">Calculate Your Loan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="slider-item" style="background-image: url('images/hero-slider/slide3.jpg');">
+                <div class="slider-overlay"></div>
+                <div class="container">
+                    <div class="slider-content">
+                        <h2 class="hero-title">Processed within 2h, Quick Approval</h2>
+                        <p class="hero-subtitle">Fast, Secure, Transparent</p>
+                        <p class="hero-description">
+                            Get 10x Loan Value by doing a Min Donation of Kshs 200
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="products.html" class="btn btn-primary">View Loan Products</a>
+                            <a href="contact.html" class="btn btn-secondary">Contact Support</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Loan Calculator Widget -->
+        <div class="loan-calculator-widget" id="calculator">
+            <div class="container">
+                <div class="calculator-container">
+                    <h3 class="calculator-title">Loan Calculator</h3>
+                    <p class="calculator-subtitle">See how much you can access</p>
+                    
+                    <div class="calculator-form">
+                        <div class="form-group">
+                            <label for="donation-amount">Your Donation (KSH)</label>
+                            <div class="input-with-slider">
+                                <input type="range" id="donation-slider" min="200" max="50000" step="100" value="2000">
+                                <div class="slider-value">
+                                    <span id="donation-value">2,000</span> KSH
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="calculator-results">
+                            <div class="result-item">
+                                <div class="result-label">Loan Access:</div>
+                                <div class="result-value" id="loan-access">20,000 KSH</div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-label">Community Impact:</div>
+                                <div class="result-value" id="community-impact">10+ people helped</div>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-primary btn-block" id="calculate-btn">
+                            <i class="fas fa-calculator"></i> Calculate
+                        </button>
+                        
+                        <a href="donate.html" class="btn btn-secondary btn-block">
+                            <i class="fas fa-hand-holding-usd"></i> Make Donation
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-        <!-- How It Works -->
-    <section class="how-it-works">
+    <!-- ===== TRUST INDICATORS ===== -->
+    <section class="trust-indicators">
+        <div class="container">
+            <div class="indicators-grid">
+                <div class="indicator-item">
+                    <div class="indicator-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="indicator-content">
+                        <h4>Regulated by CBK</h4>
+                        <p>Fully compliant with Central Bank of Kenya regulations</p>
+                    </div>
+                </div>
+                
+                <div class="indicator-item">
+                    <div class="indicator-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="indicator-content">
+                        <h4>Secure SSL</h4>
+                        <p>256-bit encryption for all transactions</p>
+                    </div>
+                </div>
+                
+                <div class="indicator-item">
+                    <div class="indicator-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="indicator-content">
+                        <h4>10,000+ Members</h4>
+                        <p>Growing community of donors and borrowers</p>
+                    </div>
+                </div>
+                
+                <div class="indicator-item">
+                    <div class="indicator-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="indicator-content">
+                        <h4>2-Hour Processing</h4>
+                        <p>Quick approval and disbursement</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="how-it-works" id="how-it-works">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">How It Works</h2>
                 <p class="section-subtitle">Three simple steps to financial empowerment</p>
             </div>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
+            
+            <div class="steps-grid">
+                <!-- Step 1 -->
+                <div class="step-card">
+                    <div class="step-number">01</div>
                     <div class="step-icon">
-                        <i class="fas fa-heart" aria-hidden="true"></i>
+                        <i class="fas fa-wallet"></i>
                     </div>
-                   <h3>Donate</h3>
-                    <p>Contribute as little as Kshs 200 to our community fund</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-icon">
-                        <i class="fas fa-handshake" aria-hidden="true"></i>
-                    </div>
-                    <h3>Borrow</h3>
-                    <p>Access loans worth 10x your donation amount</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-icon">
-                        <i class="fas fa-chart-line" aria-hidden="true"></i>
-                    </div>
-                    <h3>Thrive</h3>
-                    <p>Grow your business and build financial stability</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Loan Products -->
-    <section class="services" id="loans">
-        <div class="container">
-            <div class="section-header">
-                    <h1 class="section-title"> Donate </h1>
-                <p class="section-subtitle"> Donate Today </p>
-            </div>
-             </div>
-                <h2 class="section-title">Our Loan Products</h2>
-                <p class="section-subtitle">Tailored financing solutions for your needs</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3>QuickLoans</h3>
-                    <p>Fast, small loans for emergencies and immediate needs. Get approved within hours.</p>
-                    <ul class="loan-features">
-                        <li><i class="fas fa-check"></i> Up to Kshs 30,000</li>
-                        <li><i class="fas fa-check"></i> 24-hour approval</li>
-                        <li><i class="fas fa-check"></i> Flexible repayment</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-business-time"></i>
-                    </div>
-                    <h3>BusinessLoans</h3>
-                    <p>Capital for business expansion, inventory, and equipment. Grow your enterprise.</p>
-                    <ul class="loan-features">
-                        <li><i class="fas fa-check"></i> Up to Kshs 50,000</li>
-                        <li><i class="fas fa-check"></i> 3-6 month terms</li>
-                        <li><i class="fas fa-check"></i> Business training</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-hand-holding-heart"></i>
-                    </div>
-                    <h3>Donate & Access</h3>
-                    <p>Donate to build community capital and unlock your borrowing potential.</p>
-                    <ul class="loan-features">
-                        <li><i class="fas fa-check"></i> Kshs 200 minimum</li>
-                        <li><i class="fas fa-check"></i> 10x loan multiplier</li>
-                        <li><i class="fas fa-check"></i> Community impact</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Donation Calculator -->
-    <section class="calculator-section" id="donate">
-        <div class="container">
-            <div class="calculator-container">
-                <div class="calculator-info">
-                    <h2>Donation Calculator</h2>
-                    <p>See how your donation translates into borrowing power. Every shilling makes a difference!</p>
-                    <div class="impact-stats">
-                        <div class="impact-stat">
-                            <i class="fas fa-users"></i>
-                            <div>
-                                <h3>Community First</h3>
-                                <p>100% of donations go to community lending pool</p>
-                            </div>
-                        </div>
-                        <div class="impact-stat">
-                            <i class="fas fa-lock"></i>
-                            <div>
-                                <h3>Safe & Secure</h3>
-                                <p>Non-deposit taking institution</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="calculator-box">
-                    <div class="input-group">
-                        <label for="donationAmount">Your Donation (KSH)</label>
-                        <input type="range" id="donationAmount" min="200" max="50000" value="2000" step="100">
-                        <div class="amount-display">
-                            <span id="donationValue">2,000</span>
-                            <span>KSH</span>
-                        </div>
-                    </div>
-                    
-                    <div class="input-group">
-                        <label>Loan Access Multiplier</label>
-                        <div class="multiplier-display">
-                            <span>10x</span>
-                            <span>Your donation × 10</span>
-                        </div>
-                    </div>
-                    
-                    <button id="calculateBtn" class="btn btn-primary calculate-btn">
-                        <i class="fas fa-calculator"></i> Calculate Access
-                    </button>
-                    
-                    <div class="result-box">
-                        <div class="result-item">
-                            <span>Your Donation:</span>
-                            <strong id="yourDonation">Kshs 2,000</strong>
-                        </div>
-                        <div class="result-item">
-                            <span>Loan Access:</span>
-                            <strong id="loanAccess">Kshs 20,000</strong>
-                        </div>
-                        <div class="result-item highlight">
-                            <span>Community Impact:</span>
-                            <strong id="communityImpact">10+ people helped</strong>
-                        </div>
-                    </div>
-                    
-                    <button class="btn donate-now-btn">
-                        <i class="fas fa-heart"></i> Make Donation
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Us -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-container">
-                <div class="about-content">
-                    <h2 class="section-title">About Microokoa</h2>
-                    <p class="about-text">
-                        We are a donation-driven Community Development Financial Institution (CDFI) that operates as a <strong>non-deposit-taking microfinance institution</strong>. This means we do not accept public deposits, ensuring maximum security for our community members.
+                    <h3 class="step-title">Donate</h3>
+                    <p class="step-description">
+                        Contribute as little as Kshs 200 to our community fund. Your donation helps others access loans while building your borrowing power.
                     </p>
-                    <div class="about-features">
-                        <div class="about-feature">
-                            <i class="fas fa-shield-alt"></i>
-                            <h4>Non-Deposit Taking</h4>
-                            <p>We don't accept public deposits </p>
-                        </div>
-                        <div class="about-feature">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <div class="about-feature">
-                            <i class="fas fa-balance-scale"></i>
-                            <h4>Transparent Operations</h4>
-                            <p>Clear terms, no hidden fees, complete transparency</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <div class="mission-card">
-                        <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
-                        <p>To empower communities through innovative, donation-based financing that creates sustainable economic growth and financial inclusion for all.</p>
-                        <div class="mission-stats">
-                            <div class="mission-stat">
-                                <h4>Community First</h4>
-                                <p>Profits reinvested locally</p>
-                            </div>
-                            <div class="mission-stat">
-                                <h4>Zero Deposit Risk</h4>
-                                <p>No public deposits accepted</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h2>Get in Touch</h2>
-                    <p>Have questions? We're here to help you understand our unique donation-based model.</p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-phone-alt"></i>
-                            <div>
-                                <h4>Call Us</h4>
-                                <p>+254-710-340-896</p>
-                                <small>Available 8AM - 5PM EAT</small>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-hashtag"></i>
-                            <div>
-                                <h4>Follow Us</h4>
-                                <p>
-                                    X (Twitter): <strong>@MicrookoaGuaCap</strong><br>
-                                    Facebook: <strong>Microokoa Guaranty Capital</strong>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>Email Us</h4>
-                                <p>microokoaguarantycapital@gmail.com </p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="social-links">
-                        <a href="#" class="social-twitter" title="X (Twitter)" aria-label="Follow us on X">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-facebook" title="Facebook" aria-label="Follow us on Facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="social-whatsapp" title="WhatsApp" aria-label="Contact us on WhatsApp">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a href="#" class="social-instagram" title="Instagram" aria-label="Follow us on Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
+                    <div class="step-meta">
+                        <span class="meta-item">
+                            <i class="fas fa-check-circle"></i> Minimum: Kshs 200
+                        </span>
+                        <span class="meta-item">
+                            <i class="fas fa-check-circle"></i> Instant contribution
+                        </span>
                     </div>
                 </div>
                 
-                <div class="contact-form">
-                    <h3>Quick Contact Form</h3>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" name="fullname" placeholder="Your Full Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" name="phone" placeholder="Phone Number" required>
-                        </div>
-                        <div class="form-group">
-                            <select name="interest" required>
-                                <option value="" disabled selected>What are you interested in?</option>
-                                <option value="donation">Making a Donation</option>
-                                <option value="quickloan">QuickLoan Application</option>
-                                <option value="businessloan">BusinessLoan Application</option>
-                                <option value="inquiry">General Inquiry</option>
-                                <option value="partnership">Partnership Opportunity</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" rows="4" placeholder="Your message here..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-paper-plane"></i> Send Message
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <i class="fas fa-hand-holding-heart"></i>
-                    <div>
-                        <h3>Microokoa</h3>
-                        <p>Guaranty Capital</p>
-                        <p class="footer-slogan">Donate Today, Borrow Now!</p>
+                <!-- Step 2 -->
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3 class="step-title">Borrow</h3>
+                    <p class="step-description">
+                        Access loans worth 10x your donation amount. Quick approval within 2 hours for qualified members.
+                    </p>
+                    <div class="step-meta">
+                        <span class="meta-item">
+                            <i class="fas fa-check-circle"></i> 10x multiplier
+                        </span>
+                        <span class="meta-item">
+                            <i class="fas fa-check-circle"></i> 2-hour approval
+                        </span>
                     </div>
                 </div>
                 
-                <div class="footer-links">
-                    <div class="link-group">
-                        <h4>Quick Links</h4>
-                        <a href="#home">Home</a>
-                        <a href="#donate">Donate</a>
-                        <a href="#loans">Loan Products</a>
-                        <a href="#about">About Us</a>
-                        <a href="#contact">Contact</a>
+                <!-- Step 3 -->
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">
+                        <i class="fas fa-chart-line"></i>
                     </div>
-                    
-                    <div class="link-group">
-                        <h4>Loan Products</h4>
-                        <a href="#loans">QuickLoans</a>
-                        <a href="#loans">BusinessLoans</a>
-                        <a href="#donate">Donate & Access</a>
-                    </div>
-                    
-                    <div class="link-group">
-                        <h4>Contact Info</h4>
-                        <p><i class="fas fa-phone"></i> +254-710-340-896</p>     
-                        <p><i class="fas fa-clock"></i> Mon-Fri: 8am-6pm</p>
-                        <p><i class="fas fa-map-marker-alt"></i> A donation-driven community development financial institution (cdfi)</p>
+                    <h3 class="step-title">Thrive</h3>
+                    <p class="step-description">
+                        Grow your business and build financial stability. Repay your loan and continue participating in the community fund.
+                    </p>
+                    <div class="step-meta">
+                        <span class="meta-item">
+                            <i class="fas fa-check-circle"></i> Business growth
+                        </span>
+                        <span class="meta-item">
+                            <i class="fas fa-check-circle"></i> Financial stability
+                        </span>
                     </div>
                 </div>
             </div>
             
+            <div class="section-cta">
+                <a href="donate.html" class="btn btn-primary btn-lg">
+                    <i class="fas fa-hand-holding-heart"></i> Start Donating Today
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== LOAN PRODUCTS ===== -->
+    <section class="loan-products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Loan Products</h2>
+                <p class="section-subtitle">Tailored financing solutions for your needs</p>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Product 1: QuickLoans -->
+                <div class="product-card" id="quickloans">
+                    <div class="product-badge">Most Popular</div>
+                    <div class="product-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="product-title">QuickLoans</h3>
+                    <p class="product-description">
+                        Fast, small loans for emergencies and immediate needs. Get approved within hours.
+                    </p>
+                    <div class="product-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Up to Kshs 30,000</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>24-hour approval</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Flexible repayment</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Min. donation: Kshs 200</span>
+                        </div>
+                    </div>
+                    <div class="product-cta">
+                        <a href="products.html#quickloans" class="btn btn-outline">Learn More</a>
+                        <a href="donate.html" class="btn btn-primary">Apply Now</a>
+                    </div>
+                </div>
+                
+                <!-- Product 2: BusinessLoans -->
+                <div class="product-card" id="businessloans">
+                    <div class="product-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="product-title">BusinessLoans</h3>
+                    <p class="product-description">
+                        Capital for business expansion, inventory, and equipment. Grow your enterprise.
+                    </p>
+                    <div class="product-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Up to Kshs 50,000</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>3-6 month terms</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Business training</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Growth support</span>
+                        </div>
+                    </div>
+                    <div class="product-cta">
+                        <a href="products.html#businessloans" class="btn btn-outline">Learn More</a>
+                        <a href="donate.html" class="btn btn-primary">Apply Now</a>
+                    </div>
+                </div>
+                
+                <!-- Product 3: Donate & Access -->
+                <div class="product-card" id="donate-access">
+                    <div class="product-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="product-title">Donate & Access</h3>
+                    <p class="product-description">
+                        Donate to build community capital and unlock your borrowing potential.
+                    </p>
+                    <div class="product-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Kshs 200 minimum</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>10x loan multiplier</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Community impact</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Recurring options</span>
+                        </div>
+                    </div>
+                    <div class="product-cta">
+                        <a href="products.html#donate-access" class="btn btn-outline">Learn More</a>
+                        <a href="donate.html" class="btn btn-primary">Start Donating</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== DIGITAL WALLET SECTION ===== -->
+    <section class="digital-wallet">
+        <div class="container">
+            <div class="wallet-content">
+                <div class="wallet-info">
+                    <h2 class="section-title">Seamless Digital Payments</h2>
+                    <p class="section-subtitle">Integrated with Kenya's leading mobile money platforms</p>
+                    
+                    <div class="wallet-features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>M-Pesa Integration</h4>
+                                <p>Secure, instant donations and loan disbursements via M-Pesa</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-money-bill-wave"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Airtel Money</h4>
+                                <p>Full support for Airtel Money transactions</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Secure Transactions</h4>
+                                <p>Bank-level security for all financial transactions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="wallet-icons">
+                    <div class="wallet-icon-item">
+                        <img src="images/icons/mpesa.png" alt="M-Pesa" width="80" height="80">
+                        <span>M-Pesa</span>
+                    </div>
+                    <div class="wallet-icon-item">
+                        <img src="images/icons/airtel-money.png" alt="Airtel Money" width="80" height="80">
+                        <span>Airtel Money</span>
+                    </div>
+                    <div class="wallet-icon-item">
+                        <img src="images/icons/visa.png" alt="Visa" width="80" height="80">
+                        <span>Visa</span>
+                    </div>
+                    <div class="wallet-icon-item">
+                        <img src="images/icons/mastercard.png" alt="Mastercard" width="80" height="80">
+                        <span>Mastercard</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS & BENEFITS ===== -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Success Stories</h2>
+                <p class="section-subtitle">See how our community is transforming lives</p>
+            </div>
+            
+            <div class="testimonials-slider owl-carousel" id="testimonials-slider">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">
+                            "Thanks to Microokoa, I was able to expand my grocery shop. The 10x loan multiplier helped me access Kshs 20,000 with just a Kshs 2,000 donation."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Sarah Mwangi</h4>
+                                <p>Small Business Owner, Nairobi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">
+                            "The quick approval saved my business during an emergency. Within 2 hours, I had the funds I needed. The community model really works!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>John Omondi</h4>
+                                <p>Entrepreneur, Mombasa</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">
+                            "As a donor, I feel great knowing my contributions help others while building my own borrowing capacity. Transparent and trustworthy platform."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Grace Akinyi</h4>
+                                <p>Community Member, Kisumu</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Benefits Section -->
+            <div class="benefits-section">
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Community First</h4>
+                        <p>100% of donations go to community lending pool</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Safe & Secure</h4>
+                        <p>Non-deposit taking institution regulated by CBK</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <h4>Transparent Operations</h4>
+                        <p>Clear terms, no hidden fees, complete transparency</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <h4>Zero Deposit Risk</h4>
+                        <p>No public deposits accepted. We only manage community donations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA BANNER ===== -->
+    <section class="cta-banner">
+        <div class="container">
+            <div class="banner-content">
+                <h2 class="banner-title">Ready to Transform Your Financial Future?</h2>
+                <p class="banner-subtitle">Join thousands of Kenyans who are building wealth through community-powered financing</p>
+                
+                <div class="banner-actions">
+                    <a href="donate.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-hand-holding-usd"></i> Donate & Apply Now
+                    </a>
+                    <a href="https://play.google.com/store" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-mobile-alt"></i> Download Our App
+                    </a>
+                </div>
+                
+                <div class="banner-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">10,000+</div>
+                        <div class="stat-label">Active Members</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50M+</div>
+                        <div class="stat-label">Loans Disbursed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Satisfaction Rate</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">2h</div>
+                        <div class="stat-label">Avg. Processing</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: Branding -->
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <div class="logo-text">
+                            <h3>Microokoa Guaranty Capital</h3>
+                            <p class="tagline">Donate Today, Borrow Now!</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        A donation-driven community development financial institution (CDFI) empowering communities through innovative, donation-based financing.
+                    </p>
+                    
+                    <div class="social-links">
+                        <span class="social-label">Follow Us:</span>
+                        <div class="social-icons">
+                            <a href="https://wa.me/254710340896" class="social-icon" aria-label="WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="https://twitter.com/MicrookoaGuaCap" class="social-icon" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://facebook.com/MicrookoaGuarantyCapital" class="social-icon" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://youtube.com/@microokoaguarantycapital" class="social-icon" aria-label="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://instagram.com/microokoaguarantycapital" class="social-icon" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="donate.html">Make a Donation</a></li>
+                        <li><a href="products.html">Loan Products</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="blog.html">Blog & News</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3: Loan Products -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Loan Products</h4>
+                    <ul class="footer-links">
+                        <li><a href="products.html#quickloans">QuickLoans</a></li>
+                        <li><a href="products.html#businessloans">BusinessLoans</a></li>
+                        <li><a href="products.html#donate-access">Donate & Access</a></li>
+                        <li><a href="faqs.html">How It Works</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4: Contact Info -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Contact Information</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div class="contact-details">
+                                <strong>Call Us:</strong>
+                                <a href="tel:+254710340896">+254-710-340-896</a>
+                                <p class="contact-note">Mon-Fri: 8am-6pm</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="contact-details">
+                                <strong>Email:</strong>
+                                <a href="mailto:microokoaguarantycapital@gmail.com">microokoaguarantycapital@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div class="contact-details">
+                                <strong>Hours:</strong>
+                                <p>Monday - Friday: 8AM - 6PM EAT</p>
+                                <p>Saturday: 9AM - 1PM EAT</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-comments"></i>
+                            <div class="contact-details">
+                                <strong>Support:</strong>
+                                <p>Have questions? We're here to help you understand our unique donation-based model.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
             <div class="footer-bottom">
-                <p>&copy; 2024 Microokoa Guaranty Capital. All rights reserved. | Created by <strong>jobsimiyu8-a11y</strong></p>
-                <p class="disclaimer">We are a non-deposit-taking microfinance institution and do NOT accept public deposits.</p>
-                <div class="footer-social">
-                    <span>Follow us: </span>
-                    <a href="#"><i class="fab fa-twitter"></i> @MicrookoaGuaCap</a>
-                    <a href="#"><i class="fab fa-facebook"></i> Microokoa Guaranty Capital</a>
+                <div class="footer-bottom-content">
+                    <div class="copyright">
+                        <p>&copy; 2024 Microokoa Guaranty Capital. All rights reserved. | Created by jobsimiyu8-a11y</p>
+                    </div>
+                    
+                    <div class="mission-statement">
+                        <p><strong>Our Mission:</strong> To empower communities through innovative, donation-based financing that creates sustainable economic growth and financial inclusion for all.</p>
+                    </div>
+                    
+                    <div class="disclaimer">
+                        <p><strong>Important Notice:</strong> We are a non-deposit-taking microfinance institution and do NOT accept public deposits. All funds are community donations that form our lending pool.</p>
+                    </div>
+                    
+                    <div class="footer-links-bottom">
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="disclaimer.html">Disclaimer</a>
+                        <a href="sitemap.xml">Sitemap</a>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- ===== SCRIPTS ===== -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/calculator.js"></script>
+    <script src="js/slider.js"></script>
+    
+    <!-- Initialize Sliders -->
+    <script>
+        $(document).ready(function(){
+            // Hero Slider
+            $('#hero-slider').owlCarousel({
+                items: 1,
+                loop: true,
+                nav: true,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                smartSpeed: 1000,
+                navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>']
+            });
+            
+            // Testimonials Slider
+            $('#testimonials-slider').owlCarousel({
+                items: 1,
+                loop: true,
+                nav: true,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 6000,
+                responsive: {
+                    768: {
+                        items: 2
+                    },
+                    992: {
+                        items: 3
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
-
-
-
-
